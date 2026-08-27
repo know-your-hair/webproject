@@ -263,6 +263,19 @@ h3 { font-size: 1.3rem; }
 .result-choice.selected { border-color: var(--moss); background: #eef2e8; }
 .result-choice .tag { font-family: var(--font-mono); font-size: 0.72rem; color: var(--moss); text-transform: uppercase; }
 
+.skip-test {
+  display: block;
+  margin: 10px 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  opacity: 0.75;
+}
+.skip-test:hover { opacity: 1; }
+.skip-nudge {
+  color: var(--clay);
+  margin-top: 8px;
+}
+
 .porosity-banner {
   display: none;
   margin: 30px auto; padding: 22px 26px; border-radius: var(--radius);
