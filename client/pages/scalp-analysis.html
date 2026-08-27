@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Scalp Analysis — KnowYourHair</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header"><div id="site-header" data-active="scalp-analysis"></div></header>
+
+<main>
+  <div class="page-hero">
+    <p class="eyebrow">Self check-in</p>
+    <h1>Scalp Analysis</h1>
+    <p class="lede">Answer a few questions about how your scalp looks and feels. We'll flag general care tips — not a diagnosis.</p>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Disclaimer:</strong> This is general guidance only, not a medical assessment. Persistent itching, pain, hair loss, or sores should be seen by a dermatologist.
+  </div>
+
+  <section class="section" style="max-width:640px;margin:0 auto">
+    <form id="scalp-form">
+      <div class="field">
+        <label for="flakiness">Flakiness</label>
+        <select id="flakiness">
+          <option value="none">None</option>
+          <option value="mild">Mild, occasional</option>
+          <option value="heavy">Heavy or persistent</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="itchiness">Itchiness</label>
+        <select id="itchiness">
+          <option value="none">None</option>
+          <option value="mild">Mild</option>
+          <option value="frequent">Frequent</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="oiliness">Oiliness (by day 2 after washing)</label>
+        <select id="oiliness">
+          <option value="dry">Still dry</option>
+          <option value="balanced">Balanced</option>
+          <option value="oily">Noticeably oily</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="notes">Anything else you've noticed?</label>
+        <textarea id="notes" rows="3" placeholder="Optional"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">See my results</button>
+    </form>
+    <div id="scalp-result"></div>
+  </section>
+</main>
+
+<footer class="site-footer"><div id="site-footer"></div></footer>
+
+<script src="/js/api.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/scalp-analysis.js"></script>
+</body>
+</html>

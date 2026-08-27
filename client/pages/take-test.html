@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Take Test — KnowYourHair</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header"><div id="site-header" data-active="take-test"></div></header>
+
+<main>
+  <div class="page-hero">
+    <p class="eyebrow">Step 1 of 2</p>
+    <h1>Hair Porosity Test</h1>
+    <p class="lede">Porosity is how well your hair absorbs and holds onto moisture. Run either test below with a clean strand of hair, then tell us what you saw.</p>
+  </div>
+
+  <svg class="strand-divider container" viewBox="0 0 1120 40" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 20 C 140 40, 280 0, 420 20 S 700 40, 840 20 S 1000 0, 1120 20" />
+  </svg>
+
+  <!-- FLOAT TEST -->
+  <section class="section test-block">
+    <p class="tag-pill">Float test</p>
+    <h2>Does it sink or float?</h2>
+    <ol>
+      <li>Take a clean strand of hair from your brush or comb.</li>
+      <li>Fill a glass with room-temperature water.</li>
+      <li>Place the strand gently on the surface.</li>
+      <li>Watch it for 2–4 minutes.</li>
+    </ol>
+    <p>What did the strand do?</p>
+    <div class="result-choices" id="float-choices">
+      <button class="result-choice" data-porosity="high"><span>Sank quickly</span><span class="tag">High porosity</span></button>
+      <button class="result-choice" data-porosity="medium"><span>Slowly drifted down</span><span class="tag">Medium porosity</span></button>
+      <button class="result-choice" data-porosity="low"><span>Floated for a long time</span><span class="tag">Low porosity</span></button>
+    </div>
+  </section>
+
+  <!-- SPRAY TEST -->
+  <section class="section test-block">
+    <p class="tag-pill">Spray test</p>
+    <h2>How fast does it absorb water?</h2>
+    <ol>
+      <li>Take a small section of clean, dry hair.</li>
+      <li>Spray a fine mist of water onto it.</li>
+      <li>Watch how the hair reacts.</li>
+    </ol>
+    <p>What did you notice?</p>
+    <div class="result-choices" id="spray-choices">
+      <button class="result-choice" data-porosity="high"><span>Absorbed immediately, looked wet</span><span class="tag">High porosity</span></button>
+      <button class="result-choice" data-porosity="medium"><span>Absorbed gradually</span><span class="tag">Medium porosity</span></button>
+      <button class="result-choice" data-porosity="low"><span>Water beaded up</span><span class="tag">Low porosity</span></button>
+    </div>
+  </section>
+
+  <div class="porosity-banner container" id="result-banner">
+    <p class="eyebrow" style="color:#eaf0e5">Your result</p>
+    <h3 id="result-heading"></h3>
+    <p id="result-copy"></p>
+    <a href="/pages/get-routine.html" class="btn btn-primary" style="background:#fbf8f0;color:var(--moss-dark)">Get your routine →</a>
+  </div>
+</main>
+
+<footer class="site-footer"><div id="site-footer"></div></footer>
+
+<script src="/js/api.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/take-test.js"></script>
+</body>
+</html>
