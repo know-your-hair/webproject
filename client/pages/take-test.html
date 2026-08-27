@@ -36,8 +36,10 @@
       <button class="result-choice" data-porosity="high"><span>Sank quickly</span><span class="tag">High porosity</span></button>
       <button class="result-choice" data-porosity="medium"><span>Slowly drifted down</span><span class="tag">Medium porosity</span></button>
       <button class="result-choice" data-porosity="low"><span>Floated for a long time</span><span class="tag">Low porosity</span></button>
-    </div>
-  </section>
+         </div>
+      <button class="btn-text skip-test" id="skip-float" type="button">Skip this test</button>
+      <p class="form-note skip-nudge" id="nudge-float" style="display:none">You skipped the float test — answering both tests gives a more accurate result.</p>
+    </section>
 
   <!-- SPRAY TEST -->
   <section class="section test-block">
@@ -49,12 +51,15 @@
       <li>Watch how the hair reacts.</li>
     </ol>
     <p>What did you notice?</p>
-    <div class="result-choices" id="spray-choices">
-      <button class="result-choice" data-porosity="high"><span>Absorbed immediately, looked wet</span><span class="tag">High porosity</span></button>
-      <button class="result-choice" data-porosity="medium"><span>Absorbed gradually</span><span class="tag">Medium porosity</span></button>
-      <button class="result-choice" data-porosity="low"><span>Water beaded up</span><span class="tag">Low porosity</span></button>
-    </div>
-  </section>
+          <div class="result-choices" id="spray-choices">
+        <button class="result-choice" data-porosity="high"><span>Absorbed immediately, looked wet</span><span class="tag">High porosity</span></button>
+        <button class="result-choice" data-porosity="medium"><span>Absorbed gradually</span><span class="tag">Medium porosity</span></button>
+        <button class="result-choice" data-porosity="low"><span>Water beaded up</span><span class="tag">Low porosity</span></button>
+      </div>
+      <button class="btn-text skip-test" id="skip-spray" type="button">Skip this test</button>
+      <p class="form-note skip-nudge" id="nudge-spray" style="display:none">You skipped the spray test — answering both tests gives a more accurate result.</p>
+    </section>
+
 
   <div class="porosity-banner container" id="result-banner">
     <p class="eyebrow" style="color:#eaf0e5">Your result</p>
