@@ -1,4 +1,5 @@
 // scalp-analysis.js — rule-based tips from the form, saved via /api/scalp when logged in.
+// Flags a "consult a doctor" warning when answers indicate a serious concern.
 
 function buildTips({ flakiness, itchiness, oiliness }) {
   const tips = [];
@@ -15,6 +16,12 @@ function buildTips({ flakiness, itchiness, oiliness }) {
   return tips;
 }
 
+function isSevere({ flakiness, itchiness }) {
+  // Flag as "bad" when flaking is heavy AND itchiness is at least mild,
+  // or itchiness is frequent on its own.
+  return (flakiness === 'heavy' && itchiness !== 'none') || itchiness === 'frequent';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('scalp-form').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -25,8 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
       notes: document.getElementById('notes').value,
     };
     const tips = buildTips(payload);
+    const severe = isSevere(payload);
     const resultEl = document.getElementById('scalp-result');
+
     resultEl.innerHTML = `
+      ${severe ? `
+        <div class="porosity-banner show" style="background:var(--clay);margin-top:30px">
+          <p class="eyebrow" style="color:#f7e9e2">Please consider seeing a doctor</p>
+          <h3>Your answers suggest something worth having checked</h3>
+          <p>Heavy flaking combined with itchiness (or frequent itchiness on its own) can point to a scalp condition that's best handled by a dermatologist rather than home care alone.</p>
+          <a href="/pages/consult-doctor.html" class="btn btn-primary" style="background:#fbf8f0;color:var(--clay)">Book a doctor's appointment →</a>
+        </div>` : ''}
       <div class="routine-steps" style="margin-top:30px">
         ${tips.map((t) => `<div class="routine-step"><span class="num">•</span><p>${t}</p></div>`).join('')}
       </div>
@@ -38,5 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       document.getElementById('scalp-save-msg').textContent = 'Log in to save this result.';
     }
+
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 });
