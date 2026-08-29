@@ -6,6 +6,7 @@ const NAV_LINKS = [
   { href: '/pages/take-test.html', label: 'Take Test', key: 'take-test' },
   { href: '/pages/get-routine.html', label: 'Get Routine', key: 'get-routine' },
   { href: '/pages/scalp-analysis.html', label: 'Scalp Analysis', key: 'scalp-analysis' },
+  { href: '/pages/consult-doctor.html', label: 'Consult Doctor', key: 'consult-doctor' },
   { href: '/pages/oils.html', label: 'Oils', key: 'oils' },
   { href: '/pages/ingredients.html', label: 'Ingredients', key: 'ingredients' },
   { href: '/pages/mistakes.html', label: 'Mistakes', key: 'mistakes' },
