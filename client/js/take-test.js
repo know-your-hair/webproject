@@ -23,8 +23,6 @@ function wireGroup(groupId, key) {
 function wireSkip(buttonId, key) {
   document.getElementById(buttonId).addEventListener('click', () => {
     selections[key] = 'skip';
-    document.getElementById(`nudge-${key}`).style.display =
-      selections.float && selections.spray === 'skip' && selections.float !== 'skip' ? 'none' : 'block';
     // Show the nudge only if the OTHER test hasn't been answered with a real result yet
     const other = key === 'float' ? 'spray' : 'float';
     document.getElementById(`nudge-${key}`).style.display =
