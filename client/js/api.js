@@ -50,8 +50,11 @@ const KYH = {
     getRoutines() {
       return KYH.request('/routines');
     },
-    saveScalpAnalysis(payload) {
+      saveScalpAnalysis(payload) {
       return KYH.request('/scalp', { method: 'POST', body: payload });
+    },
+    bookAppointment(payload) {
+      return KYH.request('/appointments', { method: 'POST', body: payload }); 
     },
   },
 };
