@@ -1,7 +1,3 @@
-// take-test.js — records float/spray test answers, resolves a porosity
-// result, and saves it (locally always, to the backend if logged in).
-// Either test can be skipped, but answering both gives a more reliable result.
-
 const POROSITY_COPY = {
   high: 'High-porosity hair has raised or gapped cuticles, so it absorbs moisture fast but loses it just as quickly. Focus on sealing with butters and oils after every wash.',
   medium: 'Medium-porosity hair holds moisture well and generally responds to most products. A light, consistent routine is usually enough to keep it healthy.',
