@@ -2,7 +2,7 @@ const DOCTORS = [
   { name: 'Dr. Ibnat', specialty: 'Dermatologist — Scalp & Hair Loss', blurb: 'Specializes in scalp inflammation, dandruff, and pattern hair loss.' },
   { name: 'Dr. Nipa', specialty: 'Trichologist', blurb: 'Focuses on hair fiber health, breakage, and porosity-related damage.' },
   { name: 'Dr. Aryan', specialty: 'Dermatologist — General', blurb: 'General scalp and skin concerns, including persistent itch and irritation.' },
-  { name: 'Dr. Amishar', specialty: 'Dermatologist — Pediatric & Adult', blurb: 'Sees both children and adults for scalp conditions and hair thinning.' },
+  { name: 'Dr. Amisha', specialty: 'Dermatologist — Pediatric & Adult', blurb: 'Sees both children and adults for scalp conditions and hair thinning.' },
 ];
 
 function renderDoctors() {
