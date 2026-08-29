@@ -1,6 +1,3 @@
-// api.js — talks to the Express backend, manages the session in localStorage.
-// Loaded before main.js on every page.
-
 const API_BASE = '/api';
 
 const KYH = {
